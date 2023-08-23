@@ -14,12 +14,13 @@ class Solution {
         test.put(8, "i");
         test.put(9, "j");
 
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         String ageTrans = Integer.toString(age);
-        
-        for (char i : ageTrans.toCharArray()) {
-            answer += test.get(Character.getNumericValue(i));
+
+        for (char c : ageTrans.toCharArray()) {
+            sb.append(test.get(Character.getNumericValue(c)));
         }
-        return answer;
+        
+        return sb.toString(); 
     }
 }
